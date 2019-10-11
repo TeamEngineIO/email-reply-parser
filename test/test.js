@@ -439,3 +439,13 @@ exports.text_email_msn = function(test) {
 
 	test.done();
 }
+
+exports.text_cricket_wireless = function(test) {
+	let email = get_email("email_cricket_wireless");
+
+	let fragments = email.getFragments();
+	test.equal(COMMON_FIRST_FRAGMENT, fragments[0].toString().trim());
+	test.equal(2, fragments.length);
+
+	test.done();
+}
